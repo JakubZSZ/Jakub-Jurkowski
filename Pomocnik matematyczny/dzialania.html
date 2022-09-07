@@ -52,7 +52,31 @@
         function dodawanie() {
             var liczbaA = document.getElementById("liczbaA").value;
             var liczbaB = document.getElementById("liczbaB").value;
-            var wynik = liczbaA + liczbaB;
+            var wynik = parseInt(liczbaA) + parseInt(liczbaB);
+            document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+        }
+        function odejmowanie() {
+            var liczbaA = document.getElementById("liczbaA").value;
+            var liczbaB = document.getElementById("liczbaB").value;
+            var wynik = parseInt(liczbaA) - parseInt(liczbaB);
+            document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+        }
+        function mnozenie() {
+            var liczbaA = document.getElementById("liczbaA").value;
+            var liczbaB = document.getElementById("liczbaB").value;
+            var wynik = parseInt(liczbaA) * parseInt(liczbaB);
+            document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+        }
+        function dzielenie() {
+            var liczbaA = document.getElementById("liczbaA").value;
+            var liczbaB = document.getElementById("liczbaB").value;
+            var wynik = parseInt(liczbaA) / parseInt(liczbaB);
+            document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+        }
+        function potegowanie() {
+            var liczbaA = document.getElementById("liczbaA").value;
+            var liczbaB = document.getElementById("liczbaB").value;
+            var wynik = Math.pow(parseInt(liczbaA),parseInt(liczbaB));
             document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
         }
     </script>
