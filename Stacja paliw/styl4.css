@@ -1,0 +1,41 @@
+    #baner {
+        background-color: rgb(220,220,220);
+        text-align: center;
+        padding: 20px;
+        
+}
+    #lewy {
+        background-color: rgb(255,127,80);
+        color: white;
+        float: left;
+        width: 50%;
+        height: 410px;
+    }
+    #prawy {
+        background-color: rgb(255,127,80);
+        color: white;
+        float: right;
+        width: 50%;
+        height: 410px;
+    }
+    #główny {
+        background-color: rgb(220,220,220);
+        text-align: center;
+        padding: 20px;
+    }
+    #slewa {
+        background-color: rgb(255,127,80);
+        float: left;
+        width: 50%;
+        height: 100px;
+        color: white;
+        
+    }
+    #sprawa{
+        background-color: rgb(255,127,80);
+        float: right;
+        width: 50%;
+        height: 100px;
+        color: white;
+        text-decoration: underline;
+    }

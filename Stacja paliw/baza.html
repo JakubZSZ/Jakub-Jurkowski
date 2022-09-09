@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl4.css" type="text/css">
+    <title>Nasza stacja paliw</title>
+</head>
+<body>
+    <div id="baner">
+            <b>    
+<h2>Witamy na stacji paliw!</h2>
+    </b>
+</div>
+    <div id="lewy">
+        <img src="home.png"><br>
+        <img src="znak.png">
+        </div>
+    <div id="prawy">
+        <img src="samochod.png" alt="grafika: samochód">
+    </div>
+
+    <div id="główny">
+       <h2>Oblicz, ile lirów musisz zatankować</h2>
+
+       Dystans do przejechania w km:
+<div><input type="number" id="a"></div>
+
+
+
+      
+
+       <div>Spalanie samochodu w l/100km:
+<div>
+    <input type="number" id="b">
+</div>
+<div>   
+    <input type="button" value="Oblicz" onclick="Oblicz()">
+</div>
+<div>   
+  <div id="Dane"></div>
+</div>
+       </div>
+
+
+    </div>
+    <div id="slewa">
+    <p>Stronę opracował:</p>
+    </div>
+    <div id="sprawa">
+        Tu pobierzesz zapytanie
+    </div>
+
+<script>
+    function Oblicz(){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+
+    let wynik;
+    wynik = a * (b / 100);
+    
+    document.getElementById("Dane").innerHTML = "Potrzebujesz: " + wynik + " litrów paliwa";
+    }
+</script>
+</body>
+</html>
