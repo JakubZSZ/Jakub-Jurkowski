@@ -1,4 +1,9 @@
 1. SELECT id, gatunek, wystepowanie FROM `zwierzeta` WHERE odzywianie_id = 4;
+
 2. SELECT gatunek, odzywianie.rodzaj FROM `zwierzeta`, `odzywianie`WHERE odzywianie.id = zwierzeta.Odzywianie_id;
+
 3. SELECT COUNT(*) FROM `zwierzeta`, `odzywianie` WHERE odzywianie.id = zwierzeta.Odzywianie_id AND odzywianie_id = 1;
+
 4. CREATE USER 'JanKowalski'@'localhost' IDENTIFIED BY 'J4nKow';
+
+5. SELECT * FROM `zwierzeta` INNER JOIN `odzywianie` ON odzywianie.id = zwierzeta.Odzywianie_id;
