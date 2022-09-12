@@ -1,0 +1,26 @@
+1. SELECT * FROM `ogloszenie` WHERE kategoria = 1;
+
+2. SELECT uzytkownik.telefon FROM `uzytkownik`,`ogloszenie` 
+WHERE uzytkownik.id = ogloszenie.uzytkownik_id and ogloszenie.id = 1;
+
+3. CREATE USER 'moderator'@'localhost' IDENTIFIED BY 'qwerty';
+
+4. GRANT SELECT, DELETE ON ogloszenie TO 'moderator'@'localhost'
+
+
+SELECT imie, nazwisko FROM `uzytkownik` WHERE imie LIKE "%A";
+
+SELECT imie, nazwisko FROM `uzytkownik` WHERE imie LIKE "A%";
+
+SELECT uzytkownik.imie, uzytkownik.nazwisko, ogloszenie.tytul 
+FROM `uzytkownik`, `ogloszenie` WHERE uzytkownik.id = ogloszenie.uzytkownik_id;
+
+SELECT uzytkownik.imie, uzytkownik.nazwisko, ogloszenie.tytul FROM `uzytkownik`, `ogloszenie`
+WHERE uzytkownik.id = ogloszenie.uzytkownik_id AND uzytkownik.imie LIKE "%A";
+
+SELECT uzytkownik.telefon FROM `uzytkownik`,`ogloszenie` 
+WHERE uzytkownik.id = ogloszenie.uzytkownik_id and ogloszenie.id = 1;
+
+CREATE USER 'moderator'@'localhost' IDENTIFIED BY 'qwerty';
+
+GRANT SELECT, DELETE ON ogloszenie TO 'moderator'@'localhost'
