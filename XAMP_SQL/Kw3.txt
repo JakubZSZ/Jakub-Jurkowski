@@ -2,7 +2,13 @@
 
 2. SELECT id, temperatura_dzien FROM `pogoda` WHERE cisnienie < 1000;
 
-3.SELECT pogoda.data_prognozy, pogoda.opady, miasta.nazwa FROM `pogoda`, `miasta` 
-WHERE pogoda.miasta_id = miasta.id AND pogoda.temperatura_dzien > 20;
+3.1 SELECT pogoda.data_prognozy, pogoda.opady, miasta.nazwa FROM `pogoda`, `miasta` 
+WHERE pogoda.miasta_id = miasta.id AND pogoda.temperatura_dzien > 20; 
+
+3.2 SELECT pogoda.data_prognozy, pogoda.opady, miasta.nazwa FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.temperatura_dzien > 20;
 
 4. DELETE FROM pogoda WHERE id = 8;
+
+5. SELECT miasta.nazwa, pogoda.cisnienie FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
