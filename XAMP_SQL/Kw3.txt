@@ -12,3 +12,15 @@ INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.temperatura_dzi
 
 5. SELECT miasta.nazwa, pogoda.cisnienie FROM `pogoda` 
 INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
+
+6. SELECT miasta.nazwa, MIN(temperatura_dzien) FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
+
+7. SELECT miasta.nazwa, MAX(temperatura_dzien) AS "MAX" FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
+
+8.1 SELECT AVG(temperatura_dzien) FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
+
+8.2 SELECT AVG(temperatura_dzien) AS "Średnia" FROM `pogoda` 
+INNER JOIN `miasta` ON pogoda.miasta_id = miasta.id WHERE pogoda.cisnienie > 960;
