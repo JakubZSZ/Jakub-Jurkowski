@@ -1,0 +1,49 @@
+body {
+    font-family: Garamond;
+}
+.blok_banera_lewy, .blok_banera_prawy {
+    background-color: rgb(95, 158, 160);
+    color: yellow;
+    width: 20%;
+    height: 90px;
+    text-align: right;
+}
+.blok_banera_srodkowy {
+    background-color: rgb(95, 158, 160);
+    color: yellow;
+    width: 60%;
+    height: 90px;
+    text-align: center;
+}   
+.blok_lewy, .blok_prawy {
+    background-color: rgb(175, 238, 238);
+    width: 50%;
+    height: 250px;
+}
+.blok_lewy, .blok_prawy {
+    float: left;
+}
+.blok_banera_lewy, .blok_banera_srodkowy, .blok_banera_prawy {
+    float: left;
+}
+.blok_glowny {
+    background-color: rgb(95, 158, 160);
+    padding: 30px;
+}
+.footer {
+    background-color: rgb(175, 238, 238);
+    padding: 10px;
+}
+table{
+    border: 2px dotted green;
+    width: 100%;
+}
+td {
+    border: 2px dotted green;
+
+}
+th {
+    border: 2px dotted green;
+    color: yellow;
+    background-color: green;
+}
