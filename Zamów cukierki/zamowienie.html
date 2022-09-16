@@ -18,14 +18,14 @@
     </div>
     <div class="blok_glowny_lewy">
         Numer kształtu:<br>
-        <input type="number"><br>
+        <input type="number" id="kształt"><br>
         skomponuj swój kolor, podaj RGB:<br>
-        R: <input type="number">
-        G: <input type="number"> 
-        B: <input type="number"><br>
+        R: <input type="number" id="R">
+        G: <input type="number" id="G"> 
+        B: <input type="number" id="B"><br>
         <button onclick="zamowienie()">Zamówienie</button><br>
-        <p>Twoje zamowienie</p>
-        <button>Kolor</button>
+        <p id="wynik">Twoje zamowienie</p>
+        <button id="kolor">Kolor</button>
     </div>
     <div class="blok_glowny_prawy">
         <h2>Nasza oferta</h2>
@@ -50,7 +50,26 @@
     </footer>
 <script>
     function zamowienie() {
+        var ksztalt = document.getElementById("kształt").value;
+        var ksztalt = document.getElementById("kształt").value;
+        var R = document.getElementById("R").value;
+        var G = document.getElementById("G").value;
+        var B = document.getElementById("B").value;
+
+        var wynikk;
+        if (ksztalt==1) {
+            wynikk = "cytryna";
+        }else if (ksztalt==2) {
+            wynikk = "liść";
+        }else if (ksztalt==3) {
+            wynikk = "banan";
+        }else{
+            wynikk = "inny";
+        }
         
+        document.getElementById("wynik").innerHTML = "Twoje zamównienie to cukierek " + wynikk;
+        document.getElementById("kolor").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+
     }
 </script>
 </body>
