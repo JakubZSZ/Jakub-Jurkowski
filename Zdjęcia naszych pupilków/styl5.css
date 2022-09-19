@@ -1,0 +1,49 @@
+body {
+    font-family: Verdana;
+}
+.baner {
+    background-color: #9692B1;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+.panel_lewy {
+    background-color: #9692B1;
+    color: white;
+    width: 20%;
+    height: 750px;
+    float: left;
+}
+.panel_prawy1 {
+    background-color: #FFF4CC;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    float: left;
+}
+.panel_prawy2 {
+    background-color: #DBCC93;
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    float: right;
+}
+footer {
+    background-color: #9692B1;
+    color: white;
+    text-align: right;
+    clear: both;
+}
+a {
+    color: white;
+}
+.panel_prawy1 img{
+    width: 15%;
+    margin: 20px;
+}
+.panel_prawy2>p>img{
+    border: 4px solid #9692B1;
+}
+.panel_prawy2>p>img:hover{
+    border: 4px solid grey;
+}
