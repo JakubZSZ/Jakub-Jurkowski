@@ -2,4 +2,9 @@
 2. SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie
    FROM `osoby`,`hobby` WHERE hobby.id =10;
 3. SELECT avg(rok_urodzenia), min(rok_urodzenia), max(rok_urodzenia) FROM `osoby`;
-4. UPDATE `osoby`, `hobby` SET opis = 'Komputer' WHERE hobby.id = 4;
+4. UPDATE `osoby`, `hobby` SET opis = 'Komputer' WHERE Hobby.id = 4;
+
+SELECT imie, nazwisko, rok_urodzenia FROM `osoby` WHERE rok_urodzenia>=2000 AND rok_urodzenia<=2003;
+SELECT imie FROM `osoby` WHERE imie Like "%a";
+SELECT imie FROM `osoby` WHERE imie Like "_a%";
+SELECT imie, nazwisko, rok_urodzenia FROM `osoby` WHERE rok_urodzenia<2000 OR rok_urodzenia>2003;
