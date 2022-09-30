@@ -1,0 +1,21 @@
+1. SELECT id, nazwa, opis, cena FROM `podzespoly` WHERE cena <1000;
+
+2. SELECT nazwa, opis FROM `podzespoly` WHERE producenci_id=1 AND dostepnosc =1;
+
+3. SELECT podzespoly.nazwa, producenci.nazwa FROM `podzespoly`, `producenci` 
+   WHERE podzespoly.producenci_id = producenci.id;
+
+4. UPDATE `producenci` SET nazwa='PATRIOT' WHERE nazwa='Patriot';
+
+5. cena min,  						SELECT MIN(cena) AS 'Minimalna Cena' FROM `podzespoly`;
+6. cena max,  						SELECT MAX(cena) AS 'Maksymalna Cena' FROM `podzespoly`;
+7. cena avg,  						SELECT AVG(cena) AS 'Średnia Cena' FROM `podzespoly`;
+8. braki na magazynie, 					SELECT nazwa, opis, dostepnosc, cena FROM `podzespoly` WHERE dostepnosc=0;
+9. produkty cena 500-1000, 				SELECT nazwa, opis, cena FROM `podzespoly` WHERE cena >500 AND cena <1000;
+10. produkty nazwa opis cena sort od najdroższej, 	SELECT nazwa, opis, cena FROM `podzespoly` ORDER BY cena DESC;
+11. wyświetl nazwa, opis, kategoria, cena >1000 	SELECT typy.kategoria, nazwa, cena FROM `podzespoly`, `typy` WHERE cena >1000 AND podzespoly.typy_id = typy.id;
+12. 5 najtanszych produktów, nazwa cena, 		SELECT nazwa, opis, cena FROM `podzespoly` ORDER BY cena ASC LIMIT 5;
+13. zliczenie dostepnych produktów,			SELECT COUNT(dostepnosc) FROM `podzespoly`;
+14 podzespołty do 2 nowe.				INSERT INTO podzespoly (typy_id, producenci_id, nazwa, opis, dostepnosc, cena) 
+							VALUES (1, 1, 'Core i7-6700', 'Procesor Intel i7-6700 3,8 GHz',1, 1000);
+ 
