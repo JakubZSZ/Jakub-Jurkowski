@@ -10,12 +10,31 @@
 5. cena min,  						SELECT MIN(cena) AS 'Minimalna Cena' FROM `podzespoly`;
 6. cena max,  						SELECT MAX(cena) AS 'Maksymalna Cena' FROM `podzespoly`;
 7. cena avg,  						SELECT AVG(cena) AS 'Średnia Cena' FROM `podzespoly`;
+
 8. braki na magazynie, 					SELECT nazwa, opis, dostepnosc, cena FROM `podzespoly` WHERE dostepnosc=0;
 9. produkty cena 500-1000, 				SELECT nazwa, opis, cena FROM `podzespoly` WHERE cena >500 AND cena <1000;
+
 10. produkty nazwa opis cena sort od najdroższej, 	SELECT nazwa, opis, cena FROM `podzespoly` ORDER BY cena DESC;
-11. wyświetl nazwa, opis, kategoria, cena >1000 	SELECT typy.kategoria, nazwa, cena FROM `podzespoly`, `typy` WHERE cena >1000 AND podzespoly.typy_id = typy.id;
+
+11. wyświetl nazwa, opis, kategoria, cena >1000 	SELECT typy.kategoria, nazwa, cena FROM `podzespoly`, `typy` 
+							WHERE cena >1000 AND podzespoly.typy_id = typy.id;
+
 12. 5 najtanszych produktów, nazwa cena, 		SELECT nazwa, opis, cena FROM `podzespoly` ORDER BY cena ASC LIMIT 5;
-13. zliczenie dostepnych produktów,			SELECT COUNT(dostepnosc) FROM `podzespoly`;
-14 podzespołty do 2 nowe.				INSERT INTO podzespoly (typy_id, producenci_id, nazwa, opis, dostepnosc, cena) 
-							VALUES (1, 1, 'Core i7-6700', 'Procesor Intel i7-6700 3,8 GHz',1, 1000);
+
+13. zliczenie dostepnych produktów,			SELECT COUNT(dostepnosc) FROM `podzespoly` WHERE dostepnosc =1;
+
+14. podzespołty do 2 nowe.				INSERT INTO podzespoly VALUES (1, 1, 'Core i7-6700', 'Procesor Intel i7-6700 3,8 GHz',1, 1000);
+
+15. wszytkie produkty zaczynajace sie na C i c (podzespoły) cena <1000,		SELECT * FROM `podzespoly` WHERE cena <1000 and nazwa LIKE 'C%' and nazwa LIKE 'c%';
+16. ile jest procesorów typ							SELECT COUNT(typy_id) AS 'Wszystkie Procesory' FROM `podzespoly`, `typy` WHERE typy_id=1 AND podzespoly.typy_id= typy.id;
+17. nazwa cena cena promocyjna obniżona 20% cena promocyjna 			SELECT nazwa, cena, cena*0.8 AS 'Cena promocyjna' FROM `podzespoly`;			
+18. ile jest procesorów dostepnych 						SELECT COUNT(dostepnosc) AS 'Dostępne procesory' FROM `podzespoly` WHERE typy_id =1 AND dostepnosc =1;
+19. obnizyc cene dla kart graficznych nazwa cena cena promocyjna 20%		SELECT nazwa, cena, cena*0.8 AS 'Cena promocyjna' FROM `podzespoly` WHERE typy_id=5;
+20. grupowanie kart typ								SELECT typy.kategoria, COUNT(*) AS 'Liczba' FROM `typy`, `podzespoly` WHERE podzespoly.typy_id = typy.id GROUP BY typy.kategoria;
+										SELECT typy.kategoria, COUNT(*) AS 'Liczba produktów' FROM `typy`, `podzespoly` WHERE podzespoly.typy_id = typy.id GROUP BY typy.kategoria HAVING typy.kategoria='Procesor';
+
+
+
+
+
  
