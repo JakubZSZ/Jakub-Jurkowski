@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styl1.css" type="text/css">   
+        <title>Zdarzenia w JS</title>
+        <script>
+            function papuga()
+            {
+                document.getElementById("wynik").innerHTML="PAPUGA";
+                document.getElementById("tresc").innerHTML="Papużko, papużko,<br> Powidz mi coś na uszko.<br> Nic nie powiem, boś ty plotkarz, <br>Powtórzysz każdemu, kogo spotkasz.";
+            }
+            function zyrafa()
+            {
+                document.getElementById("wynik").innerHTML="ŻYRAFA";
+                document.getElementById("tresc").innerHTML="Żyrafa tym głównie żyje,<br>Że w górę wyciąga szyję. <br>A ka zazdroszczę żyrafie, <br>Ja nie potrafię.";
+            }
+            function krokodyl()
+            {
+                document.getElementById("wynik").innerHTML="KROKODYL";
+                document.getElementById("tresc").innerHTML="Skąd ty jesteś, krokodylu?<br>Ja? Znad nilu.<br>Wypuść mnie na kilka chwil,<br>Ro zawiozę cię nad Nil";
+            }
+            function zebra()
+            {
+                document.getElementById("wynik").innerHTML="ZEBRA";
+                document.getElementById("tresc").innerHTML="Czy ta zebra jest PRAWDZIWA?<br>Czy to tak NAPRAWDĘ bywa?<br>Czy też malarz z bożej łaski<br>Pomalował osła W PASKI?";
+            }
+            function wilk()
+            {
+                document.getElementById("wynik").innerHTML="WILK";
+                document.getElementById("tresc").innerHTML="Powiem ci w słowach kilku,<br>Co myśle o tym wilku:<br>Gdyby nie był na  obrazku,<br>Zaraz cię zjadł, głuptasku";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="tabela">
+            <table id="dane">
+                <tr>
+                    <td><img src="papuga.jfif" id="papuga"  onclick="papuga()"></td>
+                    <td><img src="zyrafa.jfif" id="zyrafa"  onclick="zyrafa()"></td>
+                    <td><img src="krokodyl.jfif" id="krokodyl"  onclick="krokodyl()"></td>
+                    <td><img src="zebra.jfif" id="zebra"  onclick="zebra()"></td>
+                    <td><img src="wilk.jfif" id="wilk"  onclick="wilk()"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="wynik"></div>
+        <div id="tresc"></div>
+    </body>
+</html>

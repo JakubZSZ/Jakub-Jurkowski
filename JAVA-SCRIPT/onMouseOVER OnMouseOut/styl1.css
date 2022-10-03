@@ -1,0 +1,19 @@
+#tabela{
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wynik {
+    background-color: aqua;
+    text-align: center;
+    font-weight: bolder;
+}
+#tresc {
+    text-align: center;
+    background-color: aquamarine;
+}
+img {
+    width: 240px;
+    height: 160px;
+}
