@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Zadanie1</title>
+        <meta charset="utf-8">
+        <style>
+            #formularz {
+                margin: auto;
+                width: 330px;
+                height: 140px;
+                background-color: #66ccff;
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            #wynik{
+                margin: auto;
+                width: 350px;
+                height: 100px;
+                background-color: #cc66ff;
+                padding-top: 20px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function przelicz() {
+                var dor=document.getElementById("d1").value;
+                var dz=document.getElementById("d2").value;
+                var dni=document.getElementById("d3").value;
+                if (!isNaN(dor) && !isNaN(dz) && !isNaN(dni) && dor!="" && dz!="" && dni!="")
+            {
+            var koszt=(dor*35+dz*25)*dni;
+            document.getElementById("wynik").innerHTML="Dokonałeś rezewacji na "+dni+" dni <br> dla "+dor+" dorosłych i "+dz+" dzieci.<br>Koszt całkowity noclegów wynosi "+koszt+" zł.";
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="formualarz">
+            <form method="post">
+                <table>
+                    <tr>
+                        <td>Podaj liczbę dorosłych:</td><td><input type="text" id="d1"></td>
+                    </tr>
+                    <tr>
+                        <td>Podaj liczbę dzieci:</td><td><input type="text" id="d2"></td>
+                    </tr>
+                    <tr>
+                        <td>Podaj liczbę dni:</td><td><input type="text" id="d3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <input type="button" id="przycisk" value="Oblicz" onclick="przelicz()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="wynik"></div>
+    </body>
+    </html>
