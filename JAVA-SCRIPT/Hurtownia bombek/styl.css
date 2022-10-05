@@ -1,0 +1,109 @@
+body{
+    background-image: url("1.png");
+    font-size: 18px;
+}
+#contener{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+#baner{
+    height: 10%;
+    text-align: center;
+    color: #CC0000;
+    font-size: 40px;
+    font-family: 'Sedgwick Ave', cursive;
+    word-spacing: 5px;
+    border-bottom: 5px #CC0000 double;
+    margin-bottom: 2%;
+}
+td{
+    text-align: center;
+    font-weight: bold;
+}
+table{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+.bombki td{
+    background-color: #CCCCCC;
+    border-radius: 30%;
+    border-spacing: 20px;
+    text-align: center;
+}
+#lewy{
+    width: 50%;
+    float: left;
+    height: 70%;
+}
+#prawy{
+    width: 50%;
+    float: left;
+    height: 69%;
+    line-height: 2em;
+}
+p{
+    text-indent: 2em;
+}
+#bb{
+    width: 100%;
+    text-align: center;
+}
+#qprawy{
+    text-align: center;
+    height: 70%;
+}
+#dprawy{
+    text-align: center;
+    height: 30%;
+    color: #330066;
+    font-weight: bold;
+}
+input[type="button"]{
+    background-color: #CC0000;
+    height: 45px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+input[type="number"]{
+    width: 50px;
+}
+select{
+    width: 160px;
+}
+#aa{
+    text-align: center;
+    margin: auto;
+}
+.tyt{
+    font-size: 20px;
+    color: #CC0000;
+    letter-spacing: 2px;
+    font-family: 'Sedgwick Ave', cursive;
+}
+.obrazek{
+    height: 80%;
+    width: 80%;
+}
+#tab{
+    width: 70%;
+    height: 60%;
+}
+#stopka{
+    height: 10%;
+    background-color: #50344f;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    clear: both;
+}
+#wynik{
+    text-align: center;
+    color: white;
+}
+i{
+    font-size: 14px;
+    color: #a35fc0;
+}

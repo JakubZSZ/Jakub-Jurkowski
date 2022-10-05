@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Hurtownia bombek</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styl.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    </head>
+    <body>
+        <section id="contener">
+            <section id="baner">
+                Hurtownia bombek SantaClaus
+            </section>
+            <section id="lewy">
+                <table>
+                    <tr>
+                        <td colspan="3">Zestaw Nr 1</td>
+                    </tr>
+                    <tr class="bombki">
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Zestaw Nr 2</td>
+                    </tr>
+                    <tr class="bombki">
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Zestaw Nr 3</td>
+                    </tr>
+                    <tr class="bombki">
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                        <td><img src="b1.png" class="obrazek"></td>
+                    </tr>
+                </table>
+
+            </section>
+            <section id="prawy">
+                <section id="qprawy">
+                    <img src="choinka1.png" style="float: right">
+                    <p class="tyt">Dokonaj zamówienia:</p>
+                    <form>
+                        <p>Numer zestawu: <select id="zestaw">
+                            <option value="z1">Zestaw Nr 1 (12.50 zł)</option>
+                            <option value="z2">Zestaw Nr 2 (17.50 zł)</option>
+                            <option value="z3">Zestaw Nr 3 (15.50 zł)</option>
+                        </select></p>
+                        <p>Ilość pudełek <input type="number" id="ilosc">
+                        <p><input type="checkbox" id="tak">Jestem stałym klientem
+                        <p><input type="button" onmouseover="oblicz()" value="Przelicz zamówienie">
+                        
+                    </form>
+                </section>
+                <section id="dprawy">
+                    <script>
+                        function oblicz()
+                        {
+                            var zestaw=document.getElementById("zestaw").value;
+                            var ilosc=Number(document.getElementById("ilosc").value);
+                            var zgoda=document.getElementById("tak").checked;
+                                if(zgoda==false)
+                                {
+                                    if (zestaw=="z1")
+                                    {var koszt = ilosc*12.5;
+                                    document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 1.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                }
+                                    if (zestaw=="z2")
+                                    {var koszt = ilosc*17.5;
+                                    document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 2.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                }
+                                    if (zestaw=="z3")
+                                    {var koszt = ilosc*15.5;
+                                    document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 3.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                }
+                                }
+                                else {
+                                    if (zestaw=="z1")
+                                    {koszt=(ilosc*12.5)*0.8;
+                                        document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 1.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                    }
+                                    if (zestaw=="z2")
+                                    {koszt=(ilosc*17.5)*0.8;
+                                        document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 2.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                    }
+                                    if (zestaw=="z3")
+                                    {koszt=(ilosc*15.5)*0.8;
+                                        document.getElementById("wynik").innerHTML="Dokonałeś zamówienia na zestaw Nr 3.<br>Ilość zamówionych pudełek: "+ilosc+".<br>Koszt zamówienia wynosi: "+koszt+" zł";
+                                    }
+                                }
+                        }
+                    </script>
+                    <section id="wynik"></section>
+                </section>
+            </section>
+        </section>
+    </body>
+</html>
