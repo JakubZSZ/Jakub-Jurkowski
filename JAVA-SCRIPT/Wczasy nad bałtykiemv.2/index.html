@@ -7,11 +7,50 @@
     <title>Wczasy nad Bałtykiem</title>
 </head>
 <body>
-    <section id="baner">
+    <div id="baner">
         Wczasy nad Bałtykiem
-    </section>
-    <section id="lewy">
+    </div>
+    <div id="lewy">
         <p>Formularz zgłoszeniowy</p>
-    </section>
+        <form>
+        <p>Liczba dzieci (1-18): <input type="number" id="1">
+        <p>Liczba dorosłych: <input type="number" id="2">
+        <p>Liczba noclegów: <input type="number" id="3">
+        <p><input type="button" value="Koszt zamówienia" onmouseover="oblicz()">
+        </form>
+        <p>TWOJE ZAMÓWIENIE:</p>
+        <div id="wynik"></div>
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <td colspan="3">Galeria zdjęć</td>
+            </tr>
+            <tr>
+                <td><img src="1.png"></td>
+                <td><img src="2.png"></td>
+                <td><img src="3.png"></td>
+            </tr>
+            <tr>
+                <td><img src="4.png"></td>
+                <td><img src="5.png"></td>
+                <td><img src="6.png"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="stopka">
+        KKKK
+    </div>
+    <script>
+        function oblicz()
+        {
+            var ldz = Number(document.getElementById("1").value);
+            var ldo = Number(document.getElementById("2").value);
+            var lno = Number(document.getElementById("3").value);
+
+            var koszt =Number((ldz*50)+(ldo*100)+(lno*50));
+            document.getElementById("wynik").innerHTML="Liczba dzieci: "+ldz+".<br>Liczba dorosłych: "+ldo+".<br>Liczba dni: "+lno+".<br>Całkowity koszt: "+koszt+" zł."
+        }
+    </script>
 </body>
 </html>

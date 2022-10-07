@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(aqua,yellow);
+
+}
+#baner{
+    text-align: center;
+}
+#lewy{
+    float: left;
+    width: 50%;
+}
+#prawy{
+    float: right;
+    width: 50%;
+}
+#stopka{
+    text-align: center;
+}
+img{
+    height: auto;
+    width: 200px;
+}
