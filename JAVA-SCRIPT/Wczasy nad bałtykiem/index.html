@@ -7,16 +7,54 @@
     <title>Wczasy nad Bałtykiem</title>
 </head>
 <body>
-    <section id="baner">
-        Wczasy nad Bałtykiem
-    </section>
-    <section id="lewy">
-        <section id="lewy1">
-            <p>Formularz zgłoszeniowy: <input type="number" id="ldz"></p>
-            <p>Liczba dzieci: </p>
-            <p>Liczba dorosłych: </p>
-            <p>Liczba noclegów: </p>
-        </section>
-    </section>
+    <div id="baner">
+        <h3>Wczasy nad Bałtykiem</h3>
+    </div>
+    <div id="lewy">
+        <div id="lewy1">
+            <p>Formularz zgłoszeniowy: </p>
+            <p>Liczba dzieci (0-18 lat): <input type="number" id="ldz"></p>
+            <p>Liczba dorosłych:         <input type="number" id="ldo"></p>
+            <p>Liczba dni:               <input type="number" id="ldn"></p>
+            <p><input type="button" onmouseover="oblicz()" value="Koszt zamówienia"></p>
+            <p>TWOJE ZAMÓWIENIE:</p>
+        </div>
+        <div id="lewy2">
+            <script>
+                function oblicz()
+                {
+                    var ldz=Number(document.getElementById("ldz").value);
+                    var ldo=Number(document.getElementById("ldo").value);
+                    var ldn=Number(document.getElementById("ldn").value);
+
+                    var koszt = (ldz*100) + (ldo*200) + (ldn*50);
+                    document.getElementById("wynik").innerHTML="Liczba dzieci: "+ldz+".<br>Liczba dorosłych: "+ldo+".<br>Liczba dni: "+ldn+".<br>Całkowity koszt: "+koszt+" zł."
+                }
+            </script>
+            <div id="wynik"></div>
+        </div>
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <td colspan="3" class="galeria">Galeria zdjęć</td>
+            </tr>
+            <tr class="lato">
+                <td><img src="1.png" class="obrazek"></td>
+                <td><img src="2.png" class="obrazek"></td>
+                <td><img src="3.png" class="obrazek"></td>
+            </tr>
+            <tr class="lato">
+                <td><img src="4.png" class="obrazek"></td>
+                <td><img src="5.png" class="obrazek"></td>
+                <td><img src="6.png" class="obrazek"></td>
+            </tr>
+        </table>
+    </div>
+   <footer>
+        KKKKK
+    </footer>
+       
+
 </body>
 </html>
