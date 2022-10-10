@@ -1,0 +1,40 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><h2>Malowanie pokoju</h2></p>
+    <p><b>Wymiary pokoju:</b></p> 
+    <p>Długość: <input type="number" id="1"></p>
+    <p>Szerokość: <input type="number" id="2"></p>
+    <p>Cena farby za m<sup>3</sup></sup>: <input type="number" id="4"></p>
+    <p>Rabat 10%<input type="checkbox" id="5"></p>
+    <p><input type="button" onclick="oblicza()" value="Koszt"></p>
+    <div id="wynik1"></div>
+    <div id="wynik2"></div>
+
+    <script>
+        function oblicza()
+        {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var d = document.getElementById("4").value;
+
+            var rabat = document.getElementById("5").checked;
+            var powierzchnia = a*b;
+            
+            if(rabat==false)
+            var cena = Number(a*b*d);
+
+            if(rabat==true)
+            var cena = Number((a*b*d)*0.9);
+
+            document.getElementById("wynik1").innerHTML="Koszt: "+cena+" zł";
+            document.getElementById("wynik2").innerHTML="Powierzchnia pokoju: "+powierzchnia+" m<sup>3</sup>";
+        }
+    </script>
+</body>
+</html>
