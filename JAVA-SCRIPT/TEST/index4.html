@@ -19,10 +19,11 @@
 var z = ""
 
             for(p; p<=k; p++){
-var z=z+p +",";
+                if(p<k)
+                var z=z+p +",";
 
-
-                
+                if(p==k)
+                z=z+p;
             }
             document.getElementById("wynik").innerHTML=""+z+"";
         }
