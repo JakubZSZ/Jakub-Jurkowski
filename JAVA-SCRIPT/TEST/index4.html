@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    p<input type="number" id="1">podaj zakres<br>
+    k<input type="number" id="2"><br>
+    <input type="button" onclick="obl1icz()" value="Wypisz"><br>
+    <div id="wynik"></div>
+
+    <script>
+        function obl1icz()
+        {
+            var p = document.getElementById("1").value;
+            var k = document.getElementById("2").value;
+var z = ""
+
+            for(p; p<=k; p++){
+var z=z+p +",";
+
+
+                
+            }
+            document.getElementById("wynik").innerHTML=""+z+"";
+        }
+    </script>
+</body>
+</html>
