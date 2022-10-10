@@ -1,0 +1,27 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Suma
+    <input type="number" id="1">a<br>
+    <input type="number" id="2">b<br>
+    <input type="button" onclick="oblicz()" value="Oblicz">
+    <div id="wynik"></div>
+
+    <script>
+        function oblicz()
+        {
+            var a = Number(document.getElementById("1").value);
+            var b = Number(document.getElementById("2").value);
+            
+            var oblicz = a + b;
+
+            document.getElementById("wynik").innerHTML="Suma: <br> "+a+" + "+b+" = "+oblicz+"";
+        }
+    </script>
+</body>
+</html>
