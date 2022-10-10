@@ -1,0 +1,36 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table,tr,td{
+        border: solid;
+    }
+    
+</style>
+</head>
+<body>
+    <p><input type="text" id="1"> Imie</p>
+    <p><input type="text" id="2"> Nazwisko</p>
+    <p>Oceny</p>
+    <p><input type="number" id="a"> <input type="number" id="b"> <input type="number" id="c"></p>
+    <p><input type="button" onclick="wypisz()" value="Wypisz"></p>
+    <div id="wynik"></div>
+    
+    <script>
+        function wypisz()
+        {
+            var imie = document.getElementById("1").value;
+            var nazwisko = document.getElementById("2").value;
+            var oce1 = document.getElementById("a").value;
+            var oce2 = document.getElementById("b").value;
+            var oce3 = document.getElementById("c").value;
+
+            document.getElementById("wynik").innerHTML="<table><tr><td>Imie</td><td>Nazwisko</td><td colspan='3'>Oceny</td></tr><tr><td>"+imie+"</td><td>"+nazwisko+"</td><td>"+oce1+"</td><td>"+oce2+"</td><td>"+oce3+"</td></tr></table>";
+        }
+    </script>
+
+</body>
+</html>
