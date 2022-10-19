@@ -26,7 +26,7 @@
             echo "<td>$nazwisko</td>";
             echo "<td>$wiek</td>";
             echo "</tr>";
-    ?>
+            ?>
         </tbody>
     </table>
 </body>
