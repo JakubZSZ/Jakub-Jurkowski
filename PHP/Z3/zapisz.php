@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table border="1px">
         <thead>
             <tr>
                 <th>Imie</th>
