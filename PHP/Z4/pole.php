@@ -8,11 +8,11 @@
 <body>
     <?php 
     $a=$_POST['a'];
-    $b=$_POST['b'];
+    $h=$_POST['h'];
 
-    $wynik=($a*$b)/2;
+    $wynik=($a*$h)/2;
     echo "<p>Pole Trójątka</p>";
-    echo "<p>0,5 * ".$a."cm * ".$b."cm = ".$wynik."cm<sup>2</sup></p>";
+    echo "<p>0,5 * ".$a."cm * ".$h."cm = ".$wynik."cm<sup>2</sup></p>";
     
     
     
