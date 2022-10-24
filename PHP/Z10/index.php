@@ -20,6 +20,10 @@ if (isset($_POST['p']) && isset($_POST['k'])){
     for ($i = $p; $i<=$k; $i++) { 
         echo "$i <br>";
     }
+    while ($p <= 10) {
+        echo "$p <br>";
+        $p++;
+    }
 }else {
     echo "Brak danych";
 }
