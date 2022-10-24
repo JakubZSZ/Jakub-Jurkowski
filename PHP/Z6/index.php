@@ -23,7 +23,7 @@
         }
         #wynik{
             width: 400px;
-            height: 200px;
+            height: 400px;
             margin: auto;
             border: 2px groove #666666;
             text-align: center;
@@ -60,6 +60,18 @@
                     </select></td>
                 </tr>
                 <tr>
+                    <td>Wiek:</td>
+                    <td><input type="number" name="wiek"></td>
+                </tr>
+                <tr>
+                    <td>Płeć:</td>
+                    <td>M:<input type="radio" name="płec" value="Mężczyzna">K:<input type="radio" name="płec" value="Kobieta"></td>
+                </tr>
+                <tr>
+                    <td>Zainteresowania:</td>
+                    <td>Sport:<input type="radio" name="sport" value="Sport">Muzyka:<input type="radio" value="Muzyka" name="muzyka"></td>
+                </tr>
+                <tr>
                     <td>Adres e-mail:</td>
                     <td><input type="email" name="mail"></td>
                 </tr>
@@ -73,18 +85,27 @@
         <?php
         if
         (!empty($_POST['imie']) && !empty($_POST['nazwisko'])
-        && !empty($_POST['mail']) && !empty($_POST['wiedza']))
+        && !empty($_POST['mail']) && !empty($_POST['wiedza'])
+        && !empty($_POST['wiek']) && !empty($_POST['płec'])
+        && !empty($_POST['sport']) && !empty($_POST['muzyka']))
         {
 
         $imie=$_POST['imie'];
         $nazwisko=$_POST['nazwisko'];
         $wiedza=$_POST['wiedza'];
         $mail=$_POST['mail'];
+        $wiek=$_POST['wiek'];
+        $płec=$_POST['płec'];
+        $sport=$_POST['sport'];
+        $muzyka=$_POST['muzyka'];
 
         echo "<p>Zapisaliśmy użytkownika o następujących danych:</p>";
         echo "<h3>$imie $nazwisko</h3>";
         echo "<h4>Wykształcenie: $wiedza</h4>";
         echo "<h4>E-mail: $mail</h4>";
+        echo "<h4>Wiek: $wiek lat</h4>";
+        echo "<h4>Płeć: $płec</h4>";
+        echo "<h4>Zainteresowania: $sport $muzyka</h4>";
         }
         ?>
     </div>
