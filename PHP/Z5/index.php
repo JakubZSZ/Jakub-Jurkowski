@@ -38,35 +38,36 @@
 </head>
 <body>
     <div id="folrumarz">
-        <from action="" method="post"></from>
-        <table>
-            <tr>
-                <td colspan="2"><h2>Formularz zgłoszeniowy</h2></td>
-            </tr>
-            <tr>
-                <td>Imię:</td>
-                <td><input type="text" name="imie"></td>
-            </tr>
-            <tr>
-                <td>Nazwisko:</td>
-                <td><input type="text" name="nazwisko"></td>
-            </tr>
-            <tr>
-                <td>Wykształcenie:</td>
-                <td><select name="wiedza">
-                    <option>wyższe</option>
-                    <option>średnie</option>
-                    <option>podstawowe</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Adres e-mail:</td>
-                <td><input type="email" name="mail"></td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: right;"><input type="submit" value="Zapisz"></td>
-            </tr>
-        </table>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td colspan="2"><h2>Formularz zgłoszeniowy</h2></td>
+                </tr>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" name="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" name="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>Wykształcenie:</td>
+                    <td><select name="wiedza">
+                        <option>wyższe</option>
+                        <option>średnie</option>
+                        <option>podstawowe</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Adres e-mail:</td>
+                    <td><input type="email" name="mail"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;"><input type="submit" value="Zapisz"></td>
+                </tr>
+            </table>
+        </form>
     </div>
     <div id="wynik">
         <?php
