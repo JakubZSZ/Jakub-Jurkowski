@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <td>Zainteresowania:</td>
-                    <td>Sport:<input type="radio" name="sport" value="Sport">Muzyka:<input type="radio" value="Muzyka" name="muzyka"></td>
+                    <td>Sport:<input type="radio" name="zain" value="Sport">Muzyka:<input type="radio" value="Muzyka" name="zain"></td>
                 </tr>
                 <tr>
                     <td>Adres e-mail:</td>
@@ -87,7 +87,7 @@
         (!empty($_POST['imie']) && !empty($_POST['nazwisko'])
         && !empty($_POST['mail']) && !empty($_POST['wiedza'])
         && !empty($_POST['wiek']) && !empty($_POST['płec'])
-        && !empty($_POST['sport']) && !empty($_POST['muzyka']))
+        && !empty($_POST['zain']))
         {
 
         $imie=$_POST['imie'];
@@ -96,8 +96,7 @@
         $mail=$_POST['mail'];
         $wiek=$_POST['wiek'];
         $płec=$_POST['płec'];
-        $sport=$_POST['sport'];
-        $muzyka=$_POST['muzyka'];
+        $zain=$_POST['zain'];
 
         echo "<p>Zapisaliśmy użytkownika o następujących danych:</p>";
         echo "<h3>$imie $nazwisko</h3>";
@@ -105,7 +104,7 @@
         echo "<h4>E-mail: $mail</h4>";
         echo "<h4>Wiek: $wiek lat</h4>";
         echo "<h4>Płeć: $płec</h4>";
-        echo "<h4>Zainteresowania: $sport $muzyka</h4>";
+        echo "<h4>Zainteresowania: $zain</h4>";
         }
         ?>
     </div>
