@@ -7,7 +7,7 @@
     <title>Sprawdź</title>
 </head>
 <body>
-    <form acrion="" method="post">
+    <form action="" method="post">
     a: <input type="number" name="a">
     <input type="submit" value="Sprawdź">
 </form>
