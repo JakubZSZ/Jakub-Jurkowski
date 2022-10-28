@@ -15,6 +15,7 @@
         echo "$x, ";
         $x++;
     }
+    
     echo "<br><br>";
     echo "II pętla: <br>";
     $x = 10;
