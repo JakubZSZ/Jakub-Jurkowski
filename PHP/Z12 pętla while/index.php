@@ -15,7 +15,7 @@
         echo "$x, ";
         $x++;
     }
-    
+
     echo "<br><br>";
     echo "II pętla: <br>";
     $x = 10;
@@ -24,6 +24,15 @@
         $x-=2;
     }
 
+    echo "<br><br>";
+    echo "III pętla: <br>";
+    $x = 1;
+    do {
+        echo "$x, ";
+        $x++;
+    } while ($x <= 5)
+
+    
 ?>
 
 </body>
