@@ -17,15 +17,16 @@ if (isset($_POST['p']) && isset($_POST['k'])){
     $p = $_POST['p'];
     $k = $_POST['k'];
 
-    for ($i = $p; $i<=$k; $i++) { 
-        echo "$i <br>";
+    for ($p; $p<=$k; $p++) { 
+        echo "$p <br>";
+    }else {
+        echo "Brak danych";
     }
+
     while ($p <= 10) {
         echo "$p <br>";
         $p++;
     }
-}else {
-    echo "Brak danych";
 }
 ?>
 
