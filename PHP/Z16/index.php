@@ -9,17 +9,17 @@
     <form acrion="" method="post">
         a <input type="number" name="a"><br><br>
         b <input type="number" name="b"><br><br>
-        + <input type="radio" value="+" name="s">
-        - <input type="radio" value="-" name="s">
-        * <input type="radio" value="*" name="s"><br>
+        + <input type="radio" value="+" name="liczby">
+        - <input type="radio" value="-" name="liczby">
+        * <input type="radio" value="*" name="liczby"><br>
           <input type="submit" value="oblicz">
 </form>
 <?php
-if (isset($_POST['a']) && isset($_POST['b']) && isset($_POST['s']))
+if (isset($_POST['a']) && isset($_POST['b']) && isset($_POST['liczby']))
 {
     $a = $_POST['a'];
     $b = $_POST['b'];
-    $działania = $_POST['s'];
+    $działania = $_POST['liczby'];
 
     switch($działania){
         case '+':
