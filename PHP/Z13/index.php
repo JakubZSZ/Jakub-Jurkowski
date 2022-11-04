@@ -6,16 +6,23 @@
     <title>Document</title>
     <style>
         table{
-            border: 1px solid black; 
+            border: 2px solid black; 
         }
         td{
-            border: 1px solid black; 
-            width: 30px;
+            border: 2px solid black; 
+            width: 60px;
+        }
+        th{
+            border: 2px solid red; 
+            width: 60px;
         }
     </style>
 </head>
 <body>
-    
+    <form action="" method="post">
+        <input type="number" name="liczba">
+        <input type="submit" value="Generuj">
+    </form>
     <?php
     echo "Pętla I <br>";
     for ($i=1; $i <= 4; $i++) { 
@@ -24,16 +31,20 @@
         }
         echo "<br>";
         }
+        if (isset($_POST['liczba'])){
 
         echo "Pętla II <br>";
+        echo "<table>";
+        echo "<tr><th>Imie</th><th>Nazwisko</th></tr>";
         $x=1;
-        for ($i=1; $i <= 5; $i++) { 
-            echo "<table>
-            <tr>
-               <td>".$x++."</td> <td>".$x++."</td>
-            </tr>
-         </table>";
+        $l=$_POST['liczba'];
+        for ($i=1; $i <= $l; $i++) { 
+            echo "<tr>
+                    <td>".$x++."</td> <td>".$x++."</td>
+                </tr>";
                 }
+        echo "</table>";
+            }
     ?>
 </body>
 </html>
