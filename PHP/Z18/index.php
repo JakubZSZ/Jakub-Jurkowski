@@ -20,6 +20,11 @@
     </style>
 </head>
 <body>
+<form action="" method="post">
+        T1: <input type="number" name="tabela1"><br>
+        T2: <input type="number" name="tabela2"><br>
+        <input type="submit" value="Generuj">
+    </form>
     <?php
     function tabela($wiersze){
         echo "Pętla II <br>";
@@ -33,7 +38,8 @@
                 }
         echo "</table>";
     }
-    tabela(4);
+    tabela($_POST['tabela1']);
+    tabela($_POST['tabela2']);
     ?>
 </body>
 </html>
