@@ -15,16 +15,16 @@
     <?php
 if (isset($_POST['nazwa_bazy'])) {
     $do_bazy = mysqli_connect('localhost','root','');
-    if (!$do_bazy) {
+    if (!$do_bazy) 
         exit("Błąd połączenia z serwerem MySQL");
-    }
+    
     $baza_sql = "CREATE DATABASE " . $_POST['nazwa_bazy'];
 
-    if (mysqli_query($do_bazy, $baza_sql)) {
+    if (mysqli_query($do_bazy, $baza_sql)) 
         echo "Baza została utworzona";
-    } else {
+    else 
         echo "Błąd! Nie można utworzyć bazy";
-    }
+    
     mysqli_close($do_bazy);
 }
     ?>
