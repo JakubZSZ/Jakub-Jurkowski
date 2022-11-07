@@ -17,7 +17,7 @@
 <?php
 if (isset($_POST['a']) && isset($_POST['b']) && isset($_POST['liczby']))
 {
-    $a = $_POST['a'];
+    $a = $_POST['a']; 
     $b = $_POST['b'];
     $działania = $_POST['liczby'];
 
