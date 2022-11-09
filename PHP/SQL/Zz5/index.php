@@ -23,7 +23,12 @@
     $nazwisko = $_POST['nazwisko'];
     $wiek = $_POST['wiek'];
 
+    $conn = mysqli_connect('localhost','root','','daneosobowe');
 
+    $sql = "INSET INTO uczen VALUES ('$id', '$imie', '$nazwisko', '$wiek');";
+
+    mysqli_query($conn, $sql);
+    mysqli_close($conn);
 }
     ?>
 </body>
