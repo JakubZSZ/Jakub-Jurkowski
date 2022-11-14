@@ -25,7 +25,7 @@
 
     $conn = mysqli_connect('localhost','root','','daneosobowe');
 
-    $sql = "INSET INTO uczen VALUES ('$id', '$imie', '$nazwisko', '$wiek');";
+    $sql = "INSERT INTO uczen VALUES ($id, '$imie', '$nazwisko', '$wiek')";
 
     mysqli_query($conn, $sql);
     mysqli_close($conn);
