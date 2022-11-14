@@ -42,10 +42,8 @@ $conn = mysqli_connect('localhost','root','','Szkoła');
 $sql = "INSERT INTO persons VALUES ($id, '$marka', '$model', '$paliwo')";
 
 mysqli_query($conn, $sql);
-mysqli_close($conn);
 }
-?>
-<?php
+
     $conn = mysqli_connect('localhost','root','','Szkoła');
 
     $zapytanie = mysqli_query($conn, 'SELECT Marka, Model FROM persons');
