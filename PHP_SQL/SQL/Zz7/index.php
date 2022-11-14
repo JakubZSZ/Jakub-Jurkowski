@@ -24,15 +24,8 @@
 
 /* Tworzenie bazy
     $do_bazy = mysqli_connect('localhost','root','');
-    if (!$do_bazy) {
-        exit("Błąd połączenia z serwerem MySQL");
-    }
     $baza_sql = "CREATE DATABASE Szkoła";
-    if (mysqli_query($do_bazy, $baza_sql)) {
-        echo "Baza została utworzona";
-    } else {
-        echo "Błąd! Nie można utworzyć bazy";
-    }
+    mysqli_query($do_bazy, $baza_sql);
     mysqli_close($do_bazy);
 */
 
