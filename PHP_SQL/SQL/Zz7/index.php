@@ -21,6 +21,7 @@
     <input type="submit" value="Zapisz">
 </form>
 <?php
+
 /* Tworzenie bazy
     $do_bazy = mysqli_connect('localhost','root','');
     if (!$do_bazy) {
@@ -34,6 +35,7 @@
     }
     mysqli_close($do_bazy);
 */
+
 if (isset($_POST['id']) && isset($_POST['marka']) 
 && isset($_POST['model']) && isset($_POST['paliwo'])){
 
@@ -44,25 +46,12 @@ $paliwo = $_POST['paliwo'];
 
 $conn = mysqli_connect('localhost','root','','Szkoła');
 
-/*
-switch ($paliwo) {
-    case 'ON':
-        $sql = "INSERT INTO persons VALUES ($id, '$marka', '$model', '$paliwo')";
-        break;
-    case '95/98':
-        $sql = "INSERT INTO persons VALUES ($id, '$marka', '$model', '$paliwo')";
-        break;
-    default:
-        break;
-}
-*/
-
 $sql = "INSERT INTO persons VALUES ($id, '$marka', '$model', '$paliwo')";
 
 mysqli_query($conn, $sql);
 mysqli_close($conn);
 }
-    ?>
+?>
 <?php
     $conn = mysqli_connect('localhost','root','','Szkoła');
 
@@ -79,6 +68,6 @@ mysqli_close($conn);
     echo "</table>";
 
     mysqli_close($conn);
-    ?>
+?>
 </body>
 </html>
