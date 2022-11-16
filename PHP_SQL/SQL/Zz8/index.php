@@ -49,7 +49,12 @@ $zapytanie = mysqli_query($conn, 'SELECT id, imie, nazwisko, pleć  FROM ag');
          <th>Pleć</th>
          </tr>";
     while ($rekord = mysqli_fetch_assoc($zapytanie)) {
-        echo "<tr><td>".$rekord['id'].'</td> <td>'.$rekord['imie']."</td><td>".$rekord['nazwisko'].'</td> <td>'.$rekord['pleć']."</td> </tr>";
+        echo "<tr>
+                <td>".$rekord['id'].'</td> 
+                <td>'.$rekord['imie']."</td>
+                <td>".$rekord['nazwisko'].'</td> 
+                <td>'.$rekord['pleć']."</td> 
+             </tr>";
     }
     echo "</table>";
     mysqli_close($conn);
