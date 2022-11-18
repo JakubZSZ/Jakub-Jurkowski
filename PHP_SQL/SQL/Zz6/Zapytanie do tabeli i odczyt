@@ -9,3 +9,12 @@ Zapytanie
     }
     mysqli_close($conn);
 ?>
+<?php
+Połączenie
+$conn = mysqli_connect('localhost','root','','daneosobowe');
+
+$sql = "INSERT INTO uczen VALUES ($id, '$imie', '$nazwisko', '$wiek')";
+
+mysqli_query($conn, $sql);
+mysqli_close($conn);
+?>
