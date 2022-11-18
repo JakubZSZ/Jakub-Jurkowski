@@ -1,0 +1,11 @@
+Zapytanie 
+<?php
+    $conn = mysqli_connect('localhost','root','','daneosobowe');
+
+    $zapytanie = mysqli_query($conn, 'SELECT Imie, Nazwisko FROM uczen');
+
+    while ($rekord = mysqli_fetch_assoc($zapytanie)) {
+        echo $rekord['Imie'].' '.$rekord['Nazwisko']."<br>";
+    }
+    mysqli_close($conn);
+?>
