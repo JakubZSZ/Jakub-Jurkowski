@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    $conn = mysqli_connect('localhost','root','','baza');
+    $conn = mysqli_connect('localhost','root','','baza4');
 
     $data = $_POST['data'];
     $ile = $_POST['ile_osób'];
