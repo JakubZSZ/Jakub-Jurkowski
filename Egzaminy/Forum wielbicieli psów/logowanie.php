@@ -29,11 +29,14 @@
                     $log = $_POST['login'];
                     $hasl = $_POST['haslo'];
                     $phasl = $_POST['phaslo'];
+
+                    $spr = FALSE;
                     
                     $con = mysqli_connect('localhost','root','','psy');
 
                     if ($log ==""  || $hasl =="" || $phasl =="") {
                         echo "<p>wypełnij wszystkie pola</p>";
+                        $spr = TRUE;
                     }
 
                     $sql = "SELECT login FROM `uzytkownicy`";
@@ -41,20 +44,21 @@
                     while ($value = mysqli_fetch_row($result)) {
                         if ($log == $value[0]) {
                             echo "<p>login występuje w bazie danych</p>"; 
+                            $spr = TRUE;
+                            break;
                         }                   
                     }
                     
                     if ($hasl != $phasl) {
                         echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
+                        $spr = TRUE;
                     }
 
-                    if ($log) {
-                        echo "<p>Konto zostało dodane</p>";
-                    }
-
+                    if ($spr == False) {
                     $sql1 = "INSERT INTO `uzytkownicy`(`login`, `haslo`) VALUES ('$log','$hasl');";
                     $result1 = mysqli_query($con,$sql1);
-
+                    echo "<p>Konto zostało dodane</p>";
+                    }
                     mysqli_close($con);
                 }
             ?>
