@@ -20,7 +20,7 @@
             login: <input type="text" name="login"><br>
             hasło: <input type="password" name="haslo"><br>
             powtórz hasło: <input type="password" name="phaslo"><br>
-            <input type="sumbit" value="Zapisz">
+            <input type="submit" value="Zapisz">
             <?php 
                 if (isset($_POST['login']) && 
                     isset($_POST['haslo']) && 
@@ -36,10 +36,10 @@
                         echo "<p>wypełnij wszystkie pola</p>";
                     }
 
-                    $sql = "SELECT login FROM `uzytkownicy` WHERE $log;";
+                    $sql = "SELECT login FROM `uzytkownicy`";
                     $result = mysqli_query($con,$sql);
-                    while ($value = mysqli_num_row($result)) {
-                        if ($value > 0) {
+                    while ($value = mysqli_fetch_row($result)) {
+                        if ($log == $value[0]) {
                             echo "<p>login występuje w bazie danych</p>"; 
                         }                   
                     }
@@ -48,9 +48,12 @@
                         echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
                     }
 
-                    
+                    if ($log) {
+                        echo "<p>Konto zostało dodane</p>";
+                    }
 
-                    
+                    $sql1 = "INSERT INTO `uzytkownicy`(`login`, `haslo`) VALUES ('$log','$hasl');";
+                    $result1 = mysqli_query($con,$sql1);
 
                     mysqli_close($con);
                 }
