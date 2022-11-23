@@ -23,6 +23,7 @@ body{
 .stopka{
     background-color: saddlebrown;
     color: white;
+    clear: both;
 }
 form{
     background-color: saddlebrown;
@@ -34,5 +35,8 @@ input{
     margin: 5px;
 }
 p::before{
-    content: "STATUS:";
+    content: "STATUS: ";
+}
+h1{
+    margin: 0;
 }
