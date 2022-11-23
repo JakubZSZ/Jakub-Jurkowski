@@ -28,9 +28,16 @@
     </div>
     <div class="prawy">
         <h2>Zapraszamy wszystkich</h2>
+        <ol>
+            <li>właścicieli psów</li>
+            <li>weterynarzy</li>
+            <li>tych, co chcą kupić psa</li>
+            <li>tych, co lubią psy</li>
+        </ol>
+        <a href="regulamin.html">Przeczytaj regulamin forum</a>
     </div>
     <div class="stopka">
-
+        <p>Stronę wykonał: 00000000000</p>
     </div>
 </body>
 </html>
