@@ -37,6 +37,6 @@ img{
     border-radius: 20px;
     clear: both;
 }
-img:hover{
+img[src="wlochy.jpg"]:hover{
     box-shadow: 0 0 10px 2px indigo;
 }
