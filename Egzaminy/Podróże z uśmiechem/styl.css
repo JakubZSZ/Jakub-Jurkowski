@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    font-family: Georgia;
+}
+.baner, .stopka{
+    background-color: indigo;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    clear: both;
+}
+.blokcookie{
+    background-color: #A1887F;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+.lewy{
+    background-color: #D7CCC8;
+    width: 35%;
+    height: 550px;
+    clear: both;
+    float: left;
+}
+.prawy{
+    background-color: #D7CCC8;
+    width: 65%;
+    height: 550px;
+    float: left;
+}
+ol, a{
+    color: indigo;
+}
+img{
+    height: 240px;
+    margin: 6px;
+    border-radius: 20px;
+    clear: both;
+}
+img:hover{
+    box-shadow: 0 0 10px 2px indigo;
+}
