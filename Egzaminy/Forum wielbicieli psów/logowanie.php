@@ -55,10 +55,12 @@
                     }
 
                     if ($spr == False) {
-                    $sql1 = "INSERT INTO `uzytkownicy`(`login`, `haslo`) VALUES ('$log','$hasl');";
+                    $szyfr = sha1($hasl,FALSE);
+                    $sql1 = "INSERT INTO `uzytkownicy`(`login`, `haslo`) VALUES ('$log','$szyfr');";
                     $result1 = mysqli_query($con,$sql1);
                     echo "<p>Konto zostało dodane</p>";
                     }
+
                     mysqli_close($con);
                 }
             ?>
