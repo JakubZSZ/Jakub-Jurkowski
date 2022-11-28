@@ -18,7 +18,7 @@
             $sql1 = "SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM `klienci`, `opinie`, `typy` WHERE klienci.id = opinie.Klienci_id AND typy.id = klienci.Typy_id AND typy.id IN(2,3);";
             $resul = mysqli_query($con,$sql1);
             while ($value1 = mysqli_fetch_row($resul)) {
-                echo "<div class='option'>
+                echo "<div class='obrazy'>
                 <img src='$value1[0]' alt='klient'></img>
                 <blockquote>$value1[2]</blockquote>
                 <h4>$value1[1]</h4>
