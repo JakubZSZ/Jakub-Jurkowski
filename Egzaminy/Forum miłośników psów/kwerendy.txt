@@ -1,0 +1,4 @@
+1. UPDATE `odpowiedzi` SET `odpowiedz`='Przyda Ci się także wysoki stół, na którym postawisz pieska.' WHERE Pytania_id =1 AND konta_id=5;
+2. SELECT nick, YEAR(CURRENT_DATE()) - rejestracja AS latNaForum FROM `konta` WHERE nick IN("Jacek", "Tomek", "Monika");
+3. SELECT konta.nick, konta.postow, pytania.pytanie FROM `konta`, `pytania` WHERE konta.id = pytania.konta_id AND pytania.id = 1;
+4. SELECT odpowiedzi.odpowiedz, konta.nick FROM odpowiedzi, konta WHERE odpowiedzi.konta_id = konta.id AND odpowiedzi.Pytania_id = 1;
