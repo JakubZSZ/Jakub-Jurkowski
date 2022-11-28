@@ -1,0 +1,53 @@
+body{
+    font-family: Tahoma;
+    margin: 0;
+}
+header{
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+footer{
+    display: flex;
+} 
+.f1, .f2, .f3, .f4{
+    background-color: tomato;
+    color: white;
+    width: 25%;
+    height: 160px;
+}
+.option{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 5px dimgray;
+}
+main{
+    background-color: seashell;
+    height: 500px;
+    overflow: auto;
+}
+img{
+    float: left;
+    border-radius: 10px;
+    margin: 10px;
+}
+blockquote{
+    padding: 10px;
+    font-size: 150%;
+    font-style: italic;
+}
+h1, h2{
+    text-align: center;
+}
+h4{
+    text-align: right;
+    margin-right: 40px;
+    font-size: 150%;
+    font-style: italic;
+}
+a{
+    color: white;
+}
