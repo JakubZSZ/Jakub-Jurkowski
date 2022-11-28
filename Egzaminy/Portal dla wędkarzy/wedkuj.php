@@ -32,11 +32,11 @@
         <section class="llewy">
             <h3>Ryby drapieżne naszych wód</h3>
             <table>
-                <th>
-                    <td>L.p.</td>
-                    <td>Gatunek</td>
-                    <td>Występowanie</td>
-                </th>
+                <tr>
+                    <th>L.p.</th>
+                    <th>Gatunek</th>
+                    <th>Występowanie</th>
+                </tr>
                 <?php
                 $sql1 = "SELECT id, nazwa, wystepowanie FROM `ryby` WHERE styl_zycia = 1;";
                 $result1 = mysqli_query($con,$sql1);

@@ -39,15 +39,6 @@
                     <td>$value[6]</td>
                     </tr>";
                 }
-                /*$iberator = mysqli_num_rows($result);
-                while ($iberator > 0) {
-                    echo "<tr>";
-                    foreach (mysqli_fetch_assoc($result) as $key => $value) {
-                    echo "<td>$value</td>";
-                    }
-                    echo "</tr>";
-                    $iberator--;
-                }*/
                 mysqli_close($conn);
             ?>
         </table>
