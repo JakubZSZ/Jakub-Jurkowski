@@ -24,7 +24,7 @@ if (!isset($_COOKIE['moje'])) {
     </section>
     <section class="baner3">
         <h3>przydatne linki</h3>
-        <a href="kwerendy.txt">Pobierz...</a>
+        <a href="kwerendy.txt" target="_blank">Pobierz...</a>
     </section>
     <section class="glowny">
         <table>
