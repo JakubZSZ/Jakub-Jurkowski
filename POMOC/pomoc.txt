@@ -1,0 +1,13 @@
+Cookie
+<?php
+if (!isset($_COOKIE['moje'])) {
+    setcookie('moje','ciacho1');
+    $info = "Ciasteczko nie jest ustawione";
+}else{
+    $info = "Ciasteczko jest ustawione, a jego wartością jest ".$_COOKIE['moje'];
+}
+?>
+
+Szyfr hasła 
+$szyfr = sha1($hasl);
+
