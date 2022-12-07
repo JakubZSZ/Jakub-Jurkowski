@@ -24,23 +24,40 @@
     <main>
         <h2>Podaj składową H koloru w kodzie HSL</h2>
         <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
-        <img src="kolory.jpg" alt="Przestrzen barw HSL">
-        <input type="number" maxlength="360" placeholder="0-360">
+        <img src="kolory.jpg" alt="Przestrzen barw HSL"><br>
+        <input type="number" maxlength="360" placeholder="0-360" id="kolor">
         <input type="button" onclick="generuj()" value="Generuj paletę">
         <table>
             <tr>
-                <th colspan="4">Kolor główny</th>
+                <th colspan="4" id="k1">Kolor główny</th>
             </tr>
             <tr>
-                <td>kolor2</td>
-                <td>kolor3</td>
-                <td>kolor4</td>
-                <td>kolor5</td>
+                <td id="k2">kolor2</td>
+                <td id="k3">kolor3</td>
+                <td id="k4">kolor4</td>
+                <td id="k5">kolor5</td>
             </tr>
         </table>
     </main>
     <footer>
         <p>Autor: 00000000000</p>
     </footer>
+    <script>
+        function generuj(){
+            var k1 = document.getElementById("k1").value;
+            var k2 = document.getElementById("k2").value;
+            var k3 = document.getElementById("k3").value;
+            var k4 = document.getElementById("k4").value;
+            var k5 = document.getElementById("k5").value;
+
+            var kolor = parseInt(document.getElementById("kolor").value);
+
+            k1 = document.getElementById("k1").style.backgroundColor = "hsl("+kolor+", 100%, 50%)";
+            k2 = document.getElementById("k2").style.backgroundColor = "hsl("+kolor+", 80%, 50%)";
+            k3 = document.getElementById("k3").style.backgroundColor = "hsl("+kolor+", 60%, 50%)";
+            k4 = document.getElementById("k4").style.backgroundColor = "hsl("+kolor+", 40%, 50%)";
+            k5 = document.getElementById("k5").style.backgroundColor = "hsl("+kolor+", 20%, 50%)";
+                }
+    </script>
 </body>
 </html>

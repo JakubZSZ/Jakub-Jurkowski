@@ -1,12 +1,12 @@
 body{
-    margin: 0;
-}
-header{
     font-family: Helvetica;
     background-color: linen;
     color: #222;
     margin: auto;
     width: 90%;
+}
+header{
+    display: flex;
 }
 .blewy, .bprawy{
     background-color: black;
@@ -35,7 +35,11 @@ a{
     color: #aaa;
     text-decoration: none;
 }
-ul{
+a:hover{
+    color: white;
+}
+li{
+    display: inline-block;
     padding: 5px;
     margin: 10px;
     border-bottom: 1px solid white;
