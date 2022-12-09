@@ -1,12 +1,16 @@
 body{
     font-family: Verdana;
     text-align: center;
-    margin: auto;
+    margin: 0;
 }
 header{
     background-color: darkgreen;
     color: white;
     padding: 5px;
+}
+main{
+    display: flex;
+    background-color: palegreen;
 }
 .lewy{
     background-color: palegreen;
@@ -37,12 +41,12 @@ table{
 th, td{
     padding: 20px 0px;
 }
-input[type="button"]{
+button{
     background-color: darkgreen;
     color: white;
     padding: 5px;
 }
-input[type="button"]:hover{
+button:hover{
     background-color: honeydew;
     color: darkgreen;
 }
