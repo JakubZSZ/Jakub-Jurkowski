@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Stacja Paliw</title>
+</head>
+<body>
+    <div class="baner">
+        <h1>Całodobowa stacja paliw</h1>
+    </div>
+    <div class="menu">
+        <a href="stacja.html"><img src="home.png"></a>
+        <a href="obliczenia.html"><img src="znak.png"></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </div>
+    <div class="lewy">
+
+    </div>
+    <div class="prawy">
+        <img src="samochod.png" alt="samochód">
+    </div>
+    <div class="stopka">
+        <p>Stronę wykonał: 00000000000</p>
+    </div>
+    <form action="stacja.html" method="post">
+        Rodzaj paliwa: <input type="number" id="rodzaj"><br>
+        Ile litrów: <input type="number" id="ilosc"><br>
+        <button type="submit" onclick="oblicz()">Oblicz</button>
+    <div id="wynik"></div>
+    </form>
+    <script>
+        function oblicz(){
+
+            var rod = Number(document.getElementById("rodzaj").value)
+            var ilos = Number(document.getElementById("ilosc").value)
+
+            if (rod == 1) {
+                var koszt = 4 * ilos
+                document.getElementById("wynik").innerHTML = "Koszt paliwa: "+koszt+" zł."
+            }
+            if (rod == 2) {
+                var koszt = 3.5 * ilos
+                document.getElementById("wynik").innerHTML = "Koszt paliwa: "+koszt+" zł."
+            }
+        }
+    </script>
+</body>
+</html>
