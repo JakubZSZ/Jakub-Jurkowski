@@ -25,7 +25,7 @@
         <input type="text" value="100%" id="rozmiar" onblur="rozmiar()">
 
         <p>Czy rysunek ma mieć ramkę?</p>
-        <input type="checkbox" onclick="ramka()" id="ramka" checked>Rysuj ramkę
+        <input type="checkbox" id="ramka" onclick="rysuj()"checked>Rysuj ramkę
 
         <p>Jaki jest typ punktora listy?</p>
         <input type="radio" name="radio" value="dysk" onclick="rodzaj('disc')">dysk<br>
@@ -62,12 +62,13 @@
             var rozmiar = document.getElementById("rozmiar").value;
             document.getElementById("prawy").style.fontSize = ""+rozmiar+""
         }
-        function ramka(){
+        function rysuj(){
             var obraz = document.getElementById("obraz");
             var ramka = document.getElementById("ramka").checked;
-            if (ramka) {
+            if (ramka==true) {
                 obraz.style.border = "1px soild white";
-            }else{
+            }
+            if (ramka==false) {
                 obraz.style.border = "none";
             }
         }
