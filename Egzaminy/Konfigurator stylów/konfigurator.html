@@ -65,11 +65,10 @@
         function rysuj(){
             var obraz = document.getElementById("obraz");
             var ramka = document.getElementById("ramka").checked;
-            if (ramka==true) {
-                obraz.style.border = "1px soild white";
-            }
-            if (ramka==false) {
-                obraz.style.border = "none";
+            if (ramka) {
+                obraz.style.border = '1px solid white';
+            }else{
+                obraz.style.border = 'none';
             }
         }
         function rodzaj(typ){
