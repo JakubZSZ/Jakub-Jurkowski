@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl6.css">
+    <title>Style w JavaScript</title>
+</head>
+<body>
+    <section class="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <input type="button" value="Indigo" id="indigo" onclick="kolorb('Indigo')">
+        <input type="button" value="SteelBLue" id="steelblue" onclick="kolorb('SteelBLue')">
+        <input type="button" value="Olive" id="olive" onclick="kolorb('Olive')">
+
+        <p>Podaj kolor czcionki</p>
+        <select id="kolorc" onchange="kolorc()">
+            <option value="White">White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select>
+
+        <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" value="100%" id="rozmiar" onblur="rozmiar()">
+
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <input type="checkbox" onclick="ramka()" id="ramka" checked>Rysuj ramkę
+
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" name="radio" value="dysk" onclick="rodzaj('disc')">dysk<br>
+        <input type="radio" name="radio" value="kwadrat" onclick="rodzaj('square')">kwadrat<br>
+        <input type="radio" name="radio" value="okrąg" onclick="rodzaj('circle')">okrąg<br>
+
+    </section>
+    <section class="prawy" id="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="obraz">
+        <ul id="lista">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </section>
+    <section class="stopka">
+        Autor: 00000000000
+    </section>
+    <script>
+        function kolorb(kolor){
+            document.getElementById("prawy").style.backgroundColor = kolor;
+        }
+        function kolorc(){
+            var kolor = document.getElementById("kolorc").value;
+            document.getElementById("prawy").style.color = ""+kolor+""
+        }
+        function rozmiar(){
+            var rozmiar = document.getElementById("rozmiar").value;
+            document.getElementById("prawy").style.fontSize = ""+rozmiar+""
+        }
+        function ramka(){
+            var obraz = document.getElementById("obraz");
+            var ramka = document.getElementById("ramka").checked;
+            if (ramka) {
+                obraz.style.border = "1px soild white";
+            }else{
+                obraz.style.border = "none";
+            }
+        }
+        function rodzaj(typ){
+            var lista = document.getElementById("lista")
+            lista.style.listStyleType = typ;
+        }
+    </script>
+</body>
+</html>

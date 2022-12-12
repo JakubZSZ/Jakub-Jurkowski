@@ -1,0 +1,4 @@
+1. CREATE USER 'Agnieszka'@'localhost' IDENTIFIED BY 'haslo4'
+2. SELECT AVG(rocznik) FROM `samochody` WHERE marka = "opel";
+3. SELECT samochody.marka, klienci.imie FROM `wypozyczenia`, `samochody`, `klienci` WHERE wypozyczenia.samochody_id = samochody.id AND wypozyczenia.klienci_id = klienci.id;
+4. ALTER TABLE klasa DROP COLUMN cena;
