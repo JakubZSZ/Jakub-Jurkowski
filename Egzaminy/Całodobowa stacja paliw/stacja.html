@@ -17,7 +17,24 @@
         <a href="kwerendy.txt">Pobierz dokumenty</a>
     </div>
     <div class="lewy">
-
+        <h2>Godziny otwarcia stacji</h2>
+        <table>
+            <tr>
+                <td>Dzień</td>
+                <td>Od</td>
+                <td>Do</td>
+            </tr>
+            <tr>
+                <td>Pn - Sb</td>
+                <td>6:00</td>
+                <td>24:00</td>
+            </tr>
+            <tr>
+                <td>Nd</td>
+                <td>7:00</td>
+                <td>24:00</td>
+            </tr>
+        </table>
     </div>
     <div class="prawy">
         <img src="samochod.png" alt="samochód">
@@ -25,27 +42,5 @@
     <div class="stopka">
         <p>Stronę wykonał: 00000000000</p>
     </div>
-    <form action="stacja.html" method="post">
-        Rodzaj paliwa: <input type="number" id="rodzaj"><br>
-        Ile litrów: <input type="number" id="ilosc"><br>
-        <button type="submit" onclick="oblicz()">Oblicz</button>
-    <div id="wynik"></div>
-    </form>
-    <script>
-        function oblicz(){
-
-            var rod = Number(document.getElementById("rodzaj").value)
-            var ilos = Number(document.getElementById("ilosc").value)
-
-            if (rod == 1) {
-                var koszt = 4 * ilos
-                document.getElementById("wynik").innerHTML = "Koszt paliwa: "+koszt+" zł."
-            }
-            if (rod == 2) {
-                var koszt = 3.5 * ilos
-                document.getElementById("wynik").innerHTML = "Koszt paliwa: "+koszt+" zł."
-            }
-        }
-    </script>
 </body>
 </html>
