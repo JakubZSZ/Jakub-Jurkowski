@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl7.css">
+    <title>Galeria</title>
+</head>
+<body>
+    <section class="baner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </section>
+    <section class="glowny">
+        <img src="lanzarotte.jpg" alt="galeria" id="obrazg">
+    </section>
+    <section class="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+        <img src="lanzarotte.jpg" alt="lanzarotte" id="lanzarotte" onclick="klik('lanzarotte.jpg')">
+        <img src="pekin.jpg" alt="pekin" id="pekin" onclick="klik('pekin.jpg')">
+        <img src="serengeti.jpg" alt="serengeti" id="serengeti" onclick="klik('serengeti.jpg')">
+        <img src="wenecja.jpg" alt="wenecja" id="wenecja" onclick="klik('wenecja.jpg')">
+        <img src="tajlandia.jpg" alt="tajlandia" id="tajlandia" onclick="klik('tajlandia.jpg')">
+    </section>
+    <section class="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <th>Europa</th>
+                <th>Azja</th>
+                <th>Afryka</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>Polub nas <img src="icon-off.png" id="icon" onclick="klik2()"></p>
+        <a href="https://pixabay.com/" target="_blank">Odkryj więcej zdjęć</a>
+    </section>
+    <section class="stopka">
+        Autor: 00000000000
+    </section>
+    <script>
+        function klik(obraz){
+            document.getElementById("obrazg").src = obraz
+        }
+        
+        var iconab = 0;
+        function klik2(){
+            iconab++;
+            var icon = document.getElementById("icon");
+            if(iconab %2 == 0){
+                icon.src = 'icon-on.png';
+            }else{
+                icon.src = 'icon-off.png';
+            }
+        }
+    </script>
+</body>
+</html>
