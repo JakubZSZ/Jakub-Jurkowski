@@ -1,0 +1,45 @@
+body{
+    font-family: Tahoma;
+    background-color: crimson;
+}
+.baner{
+    color: white;
+    text-align: center;
+    height: 370px;
+}
+.mecze{
+    display: flex;
+}
+.meczebaner{
+    color: white;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.meczebaner:hover{
+    border: 1px solid white;
+}
+.glowny{
+    background-color: whitesmoke;
+    height: 50px;
+}
+.lewy{
+    background-color: whitesmoke;
+    width: 70%;
+    height: 230px;
+    float: left;
+}
+.prawy{
+    background-color: whitesmoke;
+    width: 30%;
+    height: 230px;
+    text-align: right;
+    float: left;
+}
+h2{
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
