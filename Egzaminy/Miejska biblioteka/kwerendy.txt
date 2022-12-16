@@ -1,0 +1,4 @@
+1. INSERT INTO `czytelnicy`(`imie`, `nazwisko`, `kod`) VALUES ('Anna','Micahlik','an05mi');
+2. SELECT imie, nazwisko FROM `czytelnicy`;
+3. SELECT ksiazki.tytul FROM `ksiazki`, `autorzy` WHERE autorzy.nazwisko = "Fredro" AND ksiazki.id_autor = autorzy.id;
+4. SELECT autorzy.nazwisko, COUNT(ksiazki.tytul) AS ilosc FROM `autorzy`, `ksiazki` WHERE ksiazki.id_autor = autorzy.id GROUP BY nazwisko;
