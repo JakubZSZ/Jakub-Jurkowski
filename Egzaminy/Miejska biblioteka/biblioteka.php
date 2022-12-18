@@ -32,6 +32,7 @@
                 mysqli_query($con,$sql);
                 echo "Czytelnik: $nazwisko został dodany do bazy danych";
             }
+            
             ?>
         </section>
         <section class="srodek">
