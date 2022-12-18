@@ -21,14 +21,17 @@
             </form>
             <?php
             $con = mysqli_connect('localhost','root','','biblioteka');
-
+            if (isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['data'])) {
+            
                 $imie = $_POST['imie'];
                 $nazwisko = $_POST['nazwisko'];
                 $rok = $_POST['data'];
-                
+                $kod =  $imie[0].$imie[1].$rok[-2].$rok[-1].$nazwisko[0].$nazwisko[1];
+                $kod = strtolower($kod);
+                $sql = "INSERT INTO `czytelnicy` VALUES (NULL,'$imie','$nazwisko','$kod');";
+                mysqli_query($con,$sql);
                 echo "Czytelnik: $nazwisko został dodany do bazy danych";
-
-
+            }
             ?>
         </section>
         <section class="srodek">
