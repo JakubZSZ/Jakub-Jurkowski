@@ -1,0 +1,38 @@
+body{
+    font-family: Arial;
+    margin: 0;
+}
+.banerlewy, .banersrodek, .banerprawy, .stopkalewy, .stopkasrodek, .stopkaprawy{
+    background-color: saddlebrown;
+    color: white;
+    height: 100px;
+}
+.banerlewy, .stopkalewy{
+    width: 55%;
+    font-size: 120%;
+    float: left;
+}
+.banersrodek, .stopkasrodek{
+    width: 25%;
+    float: left;
+}
+.banerprawy, .stopkaprawy{
+    width: 20%;
+    text-align: right;
+    float: left;
+}
+.glowny{
+    background-color: snow;
+    padding: 70px;
+    clear: both;
+}
+a{
+    border: 2px dotted saddlebrown;
+    background-color: snow;
+    color: saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
+ol{
+    list-style-type: lower-latin;
+}
